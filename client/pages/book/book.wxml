@@ -1,0 +1,39 @@
+<view class="title"><text>新建活动</text></view>
+<input id='name' placeholder="标题(将展示在查询界面)" auto-focus bindinput='titleChange'/>
+<view class="divLine"></view>
+<view>
+<image id='location'src='/res/image/location.png' style='width:64rpx;height:64rpx;'></image>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">活动地点：{{array[index]}}</view>
+</picker>
+</view>
+<view class="divLine"></view>
+<view>
+  <image id='location'src='/res/image/time.png' style='width:64rpx;height:64rpx;'></image>
+<picker mode="date" value="{{date}}" start="{{start_date}}" end="{{end_date}}" bindchange="bindDateChange">
+    <view class="picker">
+      预约日期: {{date}}
+    </view>
+  </picker>
+  </view>
+<view>
+<picker mode="multiSelector" value="{{time}}" value="{{multiIndex_start}}"  range="{{multiArray}}"  bindcolumnchange="startbindTimeChange">
+    <view class="picker">
+    开始时间: {{multiArray[0][multiIndex_start[0]]}}:{{multiArray[1][multiIndex_start[1]]}}
+    </view>
+  </picker>
+<picker mode="multiSelector" value="{{time}}" value="{{multiIndex_end}}"  range="{{multiArray}}" disabled="{{true}}"id='endtime'>
+    <view class="picker">
+    结束时间: {{multiArray[0][multiIndex_end[0]]}}:{{multiArray[1][multiIndex_end[1]]}}
+    </view>
+  </picker>
+</view>
+<view class="divLine"></view>
+<view>
+<image id='location'src='/res/image/info.png' style='width:64rpx;height:64rpx;'></image>
+<view style="margin-left:18%;margin-top:6%"><input type='text' placeholder='负责人姓名(2-4汉字)' style='float:left;' bindinput='headerNameChange'></input></view>
+<view  style="margin-left:18%;margin-top:6%"><input type='number' placeholder='联系方式(11位手机号)' style='float:left;' bindinput='contactChange'></input></view>
+<view  style="margin-left:18%;margin-top:6%"><input type='text' placeholder='班级(例:计算机1601)' style='float:left;'bindinput='classChange'></input></view>
+</view>
+<view class="divLine"></view>
+<button type="primary" bindtap="primary" style='float:left;width:60%;margin-top:5%;margin-left:20%;'> 提交 </button>

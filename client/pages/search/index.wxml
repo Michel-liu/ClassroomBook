@@ -1,0 +1,50 @@
+<view wx:if="{{login == 'true'}}">
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      查询教室：{{array[index]}}
+    </view>
+  </picker>
+</view>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th "><text  style="text-align:center;margin:auto;">#\n#</text></view>
+    <view class="th "><text id='monday' style="text-align:center;margin:auto;">{{data[0]}}周一\n{{detail[0]}}</text></view>
+    <view class="th "><text id='tuesday' style="text-align:center;margin:auto;">{{data[1]}}周二\n{{detail[1]}}</text></view>
+    <view class="th "><text id='wednessday' style="text-align:center;margin:auto;">{{data[2]}}周三\n{{detail[2]}}</text></view>
+    <view class="th "><text id='thursday' style="text-align:center;margin:auto;">{{data[3]}}周四\n{{detail[3]}}</text></view>
+    <view class="th "><text id='friday' style="text-align:center;margin:auto;">{{data[4]}}周五\n{{detail[4]}}</text></view>
+    <view class="th "><text id='saturday' style="text-align:center;margin:auto;">{{data[5]}}周六\n{{detail[5]}}</text></view>
+    <view class="th "><text id='sunday' style="text-align:center;margin:auto;">{{data[6]}}周日\n{{detail[6]}}</text></view>
+  </view>
+  <view class='dateinfo'>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td time"  style="text-align:center;"><text  style="text-align:center;">{{item.time}}</text></view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[0]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[1]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[2]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[3]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[4]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[5]}}</view>
+      <view class="td" style="text-align:center;">{{item.innerHTML[6]}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td time"  style="text-align:center;"><text  style="text-align:center;">{{item.time}}</text></view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[0]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[1]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[2]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[3]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[4]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[5]}}</view>
+      <view class="td"  style="text-align:center;">{{item.innerHTML[6]}}</view>
+    </view>
+  </block>
+  </view>
+</view>
+</view>
+<view wx:else>
+<view style="text-align:center; font-size:50rpx; margin-top:15rpx;"><text>欢迎使用教室预约系统</text></view>
+<view style="text-align:left; margin: auto;font-size:30rpx; width:90%;margin-top:25rpx;"><text space="emsp" decode="{{true}}">{{title}}</text></view>
+<button open-type="getUserInfo" style="width:60%;margin-top:45rpx;"  bindgetuserinfo="bindGetUserInfo" type="primary">请您点击授权</button>
+</view>

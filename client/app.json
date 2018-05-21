@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/search/index",
+    "pages/book/book",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundColor":"#00B919",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#005EA3",
+    "navigationBarTitleText": "教室预约",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#818181",
+    "selectedColor": "#51c332",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/search/index",
+        "text": "教室查询",
+        "iconPath": "res/ico/index-unselect.png",
+        "selectedIconPath": "res/ico/index-select.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "预约申请",
+        "iconPath": "res/ico/book-unselect.png",
+        "selectedIconPath": "res/ico/book-select.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "res/ico/person-unselect.png",
+        "selectedIconPath": "res/ico/person-select.png"
+      }
+    ]
+  }
+}

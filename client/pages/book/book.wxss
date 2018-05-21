@@ -1,0 +1,33 @@
+/* pages/book/book.wxss */
+.title{
+  text-align: center;
+   font-size: 45rpx; 
+}
+#name{
+  width: 80%;
+  margin: 3% 0 0 0;
+  margin-left: 5%;
+}
+#location{
+  margin-top: 2%;
+  margin-left: 5%;
+  float:left;
+}
+.picker{
+    align-items: center;
+    float: left; 
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 80%;
+}
+.divLine{
+margin: 3% 0 0 0;
+ background: #E0E3DA;
+ width: 90%;
+ height: 5rpx;
+ float: left;
+}
+#endtime{
+  float:none;
+  padding-left: 14%;
+}
